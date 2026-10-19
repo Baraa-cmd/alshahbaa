@@ -52,33 +52,33 @@ export default function App() {
   const imageCarouselSlides = [
     {
       id: 1,
-      tag: 'FIFA Quality Pro | اعتمادات دولية',
-      title: 'عشب ملاعب كرة القدم والمستلزمات الرياضية',
-      subtitle: 'سماكات 50 و 60 ملم متينة للأكاديميات وملاعب الاستثمار الرياضي مع توريد فوري.',
+      tag: 'معتمد FIFA',
+      title: 'عشب ملاعب كرة القدم',
+      subtitle: 'سماكات 50 و 60 ملم معتمدة دولياً للأكاديميات والملاعب',
       image: 'https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1600&q=80',
       category: 'football-turf'
     },
     {
       id: 2,
-      tag: 'مروج ملكية دائمة الخضرة',
-      title: 'عشب الحدائق والفلل ومحيط المسابح',
-      subtitle: 'مظهر طبيعي نضر يقاوم حرارة الصيف وكلور المسابح ويوفر فواتير المياه بالكامل.',
+      tag: 'دائم الخضرة',
+      title: 'عشب الحدائق والفلل',
+      subtitle: 'مظهر ملكي نضر مقاوم لحرارة الصيف وموفر للمياه',
       image: 'https://images.unsplash.com/photo-1558904541-efa843a96f01?auto=format&fit=crop&w=1600&q=80',
       category: 'farm-turf'
     },
     {
       id: 3,
-      tag: 'مقاوم للاشتعال والانسكاب',
-      title: 'عشب الكافتيريات والتراسات الفاخرة',
-      subtitle: 'ديكورات عشبية راقية للمقاهي والمطاعم والمساحات الخارجية والداخلية.',
+      tag: 'ضد الاشتعال',
+      title: 'عشب التراسات والكافتيريات',
+      subtitle: 'أناقة ناعمة ومقاومة لانسكاب السوائل والحركة المكثفة',
       image: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1600&q=80',
       category: 'cafe-turf'
     },
     {
       id: 4,
-      tag: 'من المستودع مباشرة',
-      title: 'كافة مستلزمات وتجهيزات الملاعب الرياضية',
-      subtitle: 'مرامي قدم، شبكات، حبيبات مطاط SBR، رمل سيليكا مغسول وغراء ثنائي المركب.',
+      tag: 'توريد فوري',
+      title: 'مستلزمات وتجهيزات الملاعب',
+      subtitle: 'مرامي، شبكات حماية، حبيبات مطاط ورمل سيليكا مغسول',
       image: 'https://images.unsplash.com/photo-1508098682722-e99c43a406b2?auto=format&fit=crop&w=1600&q=80',
       category: 'field-supplies'
     }
@@ -339,106 +339,6 @@ export default function App() {
           </div>
         </div>
 
-        {/* Categories Strip */}
-        <div className="border-t border-emerald-100 bg-[#E8F3E8]">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center gap-1.5 sm:gap-2 overflow-x-auto no-scrollbar py-2 text-xs font-bold scroll-smooth">
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedCategory('all');
-                  document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
-                  selectedCategory === 'all'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-emerald-900 hover:bg-emerald-100'
-                }`}
-              >
-                <Sparkles className="w-3.5 h-3.5 text-amber-500" />
-                <span>كافة المنتجات</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedCategory('football-turf');
-                  document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
-                  selectedCategory === 'football-turf'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-emerald-900 hover:bg-emerald-100'
-                }`}
-              >
-                <span>⚽ عشب ملاعب كرة القدم</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedCategory('cafe-turf');
-                  document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
-                  selectedCategory === 'cafe-turf'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-emerald-900 hover:bg-emerald-100'
-                }`}
-              >
-                <span>☕ عشب الكافتيريات والتراسات</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedCategory('farm-turf');
-                  document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
-                  selectedCategory === 'farm-turf'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-emerald-900 hover:bg-emerald-100'
-                }`}
-              >
-                <span>🌿 عشب المزارع والفلل</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setSelectedCategory('field-supplies');
-                  document.getElementById('catalog')?.scrollIntoView({ behavior: 'smooth' });
-                }}
-                className={`px-3.5 py-1.5 rounded-lg whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer ${
-                  selectedCategory === 'field-supplies'
-                    ? 'bg-emerald-600 text-white shadow-xs'
-                    : 'text-emerald-900 hover:bg-emerald-100'
-                }`}
-              >
-                <span>🥅 مستلزمات الملاعب</span>
-              </button>
-
-              <span className="text-emerald-300 px-1 hidden md:inline">|</span>
-
-              <a
-                href="#calculator"
-                className="px-3.5 py-1.5 rounded-lg text-emerald-900 hover:bg-emerald-100 whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer"
-              >
-                <Calculator className="w-3.5 h-3.5 text-emerald-700" />
-                <span>حاسبة المقايسة</span>
-              </a>
-
-              <a
-                href="#projects"
-                className="px-3.5 py-1.5 rounded-lg text-emerald-900 hover:bg-emerald-100 whitespace-nowrap transition-colors flex items-center gap-1.5 cursor-pointer"
-              >
-                <Award className="w-3.5 h-3.5 text-emerald-700" />
-                <span>شواهد المشاريع</span>
-              </a>
-            </div>
-          </div>
-        </div>
       </header>
 
       {/* =====================================================================
@@ -659,7 +559,7 @@ export default function App() {
                 {/* Content Overlay */}
                 <div className="absolute inset-0 flex flex-col justify-end p-4 sm:p-6 md:p-8 max-w-3xl space-y-1.5 sm:space-y-3">
                   <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-600/90 backdrop-blur-md text-white text-[11px] sm:text-sm font-bold w-fit shadow-md border border-emerald-400/40">
-                    <Sparkles className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-200 shrink-0" />
+                    <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-200 shrink-0" />
                     <span>{slide.tag}</span>
                   </div>
 
@@ -670,62 +570,10 @@ export default function App() {
                     {slide.subtitle}
                   </p>
 
-                  <div className="pt-1 sm:pt-2 flex flex-wrap items-center gap-2 sm:gap-3">
-                    <button
-                      onClick={() => {
-                        setSelectedCategory(slide.category as ProductCategory);
-                        const el = document.getElementById('catalog-section');
-                        if (el) el.scrollIntoView({ behavior: 'smooth' });
-                      }}
-                      className="px-4 sm:px-6 py-2.5 sm:py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-black text-xs sm:text-sm rounded-xl sm:rounded-2xl shadow-lg shadow-emerald-700/40 flex items-center gap-1.5 sm:gap-2 active:scale-98 transition-all"
-                    >
-                      <span>استعراض أصناف القسم</span>
-                      <ArrowLeft className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
-                    </button>
-
-                    <button
-                      onClick={() => openWhatsApp(`السلام عليكم شركة الشهباء، أرغب بالاستفسار عن (${slide.title}) ومواصفاته والأسعار.`)}
-                      className="px-3.5 sm:px-5 py-2.5 sm:py-3.5 bg-white/15 hover:bg-white/25 backdrop-blur-md text-white border border-white/30 font-bold text-xs sm:text-sm rounded-xl sm:rounded-2xl flex items-center gap-1.5 sm:gap-2 transition-all shadow-lg"
-                    >
-                      <MessageCircle className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-emerald-300 fill-current" />
-                      <span>طلب عرض سعر واتساب</span>
-                    </button>
-                  </div>
                 </div>
               </div>
             ))}
 
-            {/* Navigation Arrows */}
-            <button
-              onClick={() => setActiveImageSlide((prev) => (prev - 1 + imageCarouselSlides.length) % imageCarouselSlides.length)}
-              aria-label="السابق"
-              className="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-black/40 hover:bg-emerald-600/80 backdrop-blur-md text-white flex items-center justify-center border border-white/20 transition-all shadow-lg"
-            >
-              <ChevronRight className="w-5 h-5 sm:w-6 sm:h-6" />
-            </button>
-            <button
-              onClick={() => setActiveImageSlide((prev) => (prev + 1) % imageCarouselSlides.length)}
-              aria-label="التالي"
-              className="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 z-20 w-8 h-8 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-black/40 hover:bg-emerald-600/80 backdrop-blur-md text-white flex items-center justify-center border border-white/20 transition-all shadow-lg"
-            >
-              <ChevronLeft className="w-5 h-5 sm:w-6 sm:h-6" />
-            </button>
-
-            {/* Moving Dot Indicators at Bottom Center */}
-            <div className="absolute bottom-3 sm:bottom-4 left-1/2 -translate-x-1/2 z-20 flex items-center gap-1.5 sm:gap-2 bg-black/30 backdrop-blur-md px-3 sm:px-4 py-1.5 sm:py-2 rounded-full border border-white/20 shadow-md">
-              {imageCarouselSlides.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveImageSlide(idx)}
-                  aria-label={`انتقل للشريحة ${idx + 1}`}
-                  className={`transition-all rounded-full ${
-                    activeImageSlide === idx
-                      ? 'w-6 sm:w-8 h-2 sm:h-2.5 bg-emerald-400 shadow-md'
-                      : 'w-2 sm:w-2.5 h-2 sm:h-2.5 bg-white/50 hover:bg-white/80'
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </section>
